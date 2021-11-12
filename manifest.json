@@ -1,0 +1,10 @@
+{
+    "name": "Meme Tab",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "See a new meme every time you open a new tab.",
+    "permissions": [],
+    "chrome_url_overrides": {
+      "newtab": "./index.html"
+    }
+  }

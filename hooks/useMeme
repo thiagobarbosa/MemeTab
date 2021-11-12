@@ -1,0 +1,21 @@
+import { useEffect, useState } from "react";
+import { getMeme } from "../services/memes";
+
+const useMeme = () => {
+  const [image, setImage] = useState([]);
+
+  useEffect(() => {
+    const fetchProperties = async () => {
+      try {
+        setImage(await getMeme());
+      } catch (error) {
+        return [];
+      }
+    };
+    fetchProperties();
+  }, []);
+
+  return [image];
+};
+
+export default useMeme;
